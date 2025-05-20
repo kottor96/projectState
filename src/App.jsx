@@ -1,13 +1,32 @@
 import { useState } from 'react'
 import Card from './components/card'
+import arcade from './assets/arcade.svg'
+import pro from './assets/pro.svg'
+import sidebar from './assets/sidebar.svg'
+import merci from './assets/thankyou.svg'
+import avancer from './assets/advenced.svg'
 
+const listePlan = [{logo:arcade,titre:'Arcade',prixM:9},{logo:avancer,titre:'Avancer',prixA:12},{logo:pro,titre:'Pro',prix:15}]
 function App() {
-  const [page,setPage] = useState(1)
+  const [page,setPage] = useState(0)
   const [id,setId] = useState({nom:'',email:'',numberPhone:''}) 
+
+  function nextPage(){
+    setPage(page+1)
+  }
+  function prewPage(){
+    setPage(page-1)
+  }
 
   return (
     <>
-      <Card page={page} id={id}/>
+      <Card 
+        page={page}
+        id={id} 
+        listePlan={listePlan} 
+        nextPage={nextPage} 
+        prewPage={prewPage} 
+      />
     </>
   )
 }

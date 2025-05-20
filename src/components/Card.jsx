@@ -1,4 +1,5 @@
 import Formulaire from "./Formulaire";
+import Etape from "./etape/Etape";
 
 export default function Card(props) {
 
@@ -7,7 +8,7 @@ export default function Card(props) {
         <section>
             <div id="carte">
                 <div id="option">
-                    
+                    <Etape/>
                 </div>
                 <div id="formulaire">
                     <Formulaire {...props}/>

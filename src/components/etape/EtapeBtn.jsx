@@ -1,4 +1,4 @@
-export default function BtnOption({n,etape}) {
+export default function EtapeBtn({n,etape}) {
 
   return (
     <>
