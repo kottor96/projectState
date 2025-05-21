@@ -30,18 +30,36 @@ export default function Formulaire(props) {
                         {props.listePlan.map((el,index)=>
                             <Plan key={index} el={el}/>
                         )}
-                        
+                        <div className="form-check form-switch">
+                            <input
+                                className="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="switchCheckDefault"
+                            />
+                            <label className="form-check-label" htmlFor="switchCheckDefault">
+                                Default switch checkbox input
+                            </label>
+                            </div>
                         <div>
                             <Btn containt={'précedent'} action={props.prewPage}/>
                             <Btn containt={'suivant'} action={props.nextPage}/>
                         </div>
                     </form>
                 )
+                :props.page===2
+                ?<form>
+                    <div>
+                        <Btn containt={'précedent'} action={props.prewPage}/>
+                        <Btn containt={'suivant'} action={props.nextPage}/>
+                    </div>
+                </form>
                 :<form>
                     <div>
                         <Btn containt={'précedent'} action={props.prewPage}/>
                     </div>
                 </form>
+
 
                 
             }

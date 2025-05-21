@@ -21,9 +21,9 @@ function App() {
   return (
     <>
       <Card 
-        page={page}
         id={id} 
         listePlan={listePlan} 
+        page={page}
         nextPage={nextPage} 
         prewPage={prewPage} 
       />
