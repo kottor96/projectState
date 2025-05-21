@@ -56,7 +56,7 @@ body {
 }
 .plan > div:hover {
   cursor: pointer;
-  border-color: hsl(268, 30%, 65%);
+  border-color: hsl(268, 46%, 74%);
 }
 
 #formulaire {
@@ -113,6 +113,7 @@ body {
   border-radius: 50%;
   background-color: rgba(70.89, 61.2, 255, 0);
   border: hsl(229, 24%, 87%) solid 2px;
+  cursor: default;
 }
 #etape .etape > div:last-child {
   flex: 3;
@@ -159,7 +160,7 @@ body {
   padding: 15px;
 }
 #info .divEntrer input:focus {
-  outline-color: hsl(243, 100%, 62%);
+  outline-color: hsl(268, 46%, 74%);
 }
 
 .head h2 {
