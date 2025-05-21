@@ -1,10 +1,10 @@
-export default function EtapeBtn({n,etape}) {
+export default function EtapeBtn({n,etape,page}) {
 
   return (
     <>
         <div className="etape">
             <div>
-              <button>{n}</button>
+              <button className={n===(page+1)?'active':''}>{n}</button>
             </div>
             <div>
               <h4>étape {n}</h4>

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Card from './components/card'
 import arcade from './assets/arcade.svg'
 import pro from './assets/pro.svg'
-import sidebar from './assets/sidebar.svg'
 import merci from './assets/thankyou.svg'
 import avancer from './assets/advenced.svg'
 

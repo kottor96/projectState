@@ -8,7 +8,7 @@ export default function Card(props) {
         <section id="cardFormulaire">
             <div id="carte">
                 <div id="etape">
-                    <Etape/>
+                    <Etape {...props}/>
                 </div>
                 <div id="formulaire">
                     <Formulaire {...props}/>

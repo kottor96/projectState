@@ -95,7 +95,7 @@ body {
   border-radius: 50%;
   box-sizing: border-box;
 }
-#etape .etape > div:first-child button:hover {
+#etape .etape > div:first-child .active {
   background-color: hsl(206, 94%, 87%);
 }
 #etape .etape > div:first-child button {
