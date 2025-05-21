@@ -9,12 +9,16 @@ export default function Formulaire(props) {
             {props.page===0 
                 ? (
                     <form>
-                        <h2>Info Personel</h2>
+                        <div className="head">
+                            <h2>Info Personel</h2>
+                            <h3>Merci d'entre votre nom, adresse mail, numero de téléphone</h3>
+                        </div>
+                        
 
-                        <div>
-                            <Entrer label={'Votre nom est :'} type={'text'}/>
-                            <Entrer label={'votre adresse est :'} type={'email'}/>
-                            <Entrer label={'votre numero est :'} type={'number'}/>
+                        <div id="info">
+                            <Entrer label={'Votre nom est :'} type={'text'} placeholder={'Truc Mush'}/>
+                            <Entrer label={'votre adresse est :'} type={'email'} placeholder={'trucmush@gmail.com'}/>
+                            <Entrer label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'}/>
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>
@@ -25,23 +29,24 @@ export default function Formulaire(props) {
                 :props.page===1
                 ?(
                     <form action="">
-                        <h2>Selection ton plan</h2>
-                        <h3>Vous pouvez choisir par mois ou par ans</h3>
+                        <div className="head">
+                            <h2>Selection ton plan</h2>
+                            <h3>Vous pouvez choisir par mois ou par ans</h3>
+                        </div>
                         <div className="plan">
                             {props.listePlan.map((el,index)=>
                                 <Plan key={index} el={el}/>
                             )}
                         </div>
-                        <div className="form-check form-switch">
+                        <div className="form-switch p-0 d-flex justify-content-between">
+                            <h6>Mois</h6>
                             <input
                                 className="form-check-input"
                                 type="checkbox"
                                 role="switch"
                                 id="switchCheckDefault"
                             />
-                            <label className="form-check-label" htmlFor="switchCheckDefault">
-                                Default switch checkbox input
-                            </label>
+                            <h6>Ans</h6>
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
