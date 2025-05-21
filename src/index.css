@@ -1,3 +1,14 @@
+#cardFormulaire {
+  padding: 5rem 20vw;
+}
 
+#carte {
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  border: 1px solid black;
+}
 
 /*# sourceMappingURL=index.css.map */

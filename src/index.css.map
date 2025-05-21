@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"index.css"}
+{"version":3,"sourceRoot":"","sources":["sass/partials/_card.sass","sass/partials/_variable.sass"],"names":[],"mappings":"AACA;EACI;;;AACJ;EACI;EACA,kBCKO;EDJP;EACA;EACA;EACA","file":"index.css"}
