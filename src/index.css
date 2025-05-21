@@ -5,11 +5,16 @@ body {
   background-color: hsl(217, 100%, 97%) !important;
 }
 
+.rigolo {
+  background-color: orange !important;
+}
+
 #cardFormulaire {
   padding: 3rem 15vw;
 }
 
 #carte {
+  outline: none;
   justify-content: space-between;
   min-height: 80vh;
   background-color: hsl(0, 0%, 100%);
@@ -33,7 +38,10 @@ body {
   border: hsl(229, 24%, 87%) 2px solid;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 3px 5px;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 .plan > div h3, .plan > div h4 {
   margin: 0;
@@ -45,6 +53,10 @@ body {
 .plan > div h4 {
   font-size: medium;
   color: hsl(231, 11%, 63%);
+}
+.plan > div:hover {
+  cursor: pointer;
+  border-color: hsl(268, 30%, 65%);
 }
 
 #formulaire {
@@ -12013,6 +12025,52 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.bonus {
+  display: flex;
+  justify-content: center;
+  padding: 4px 10px;
+  width: 100%;
+  border: 2px hsl(229, 24%, 87%) solid;
+  border-radius: 10px;
+  align-items: center;
+}
+.bonus > * {
+  flex: 1;
+}
+.bonus p {
+  text-align: center;
+  margin: 0;
+}
+.bonus div {
+  flex: 5;
+}
+.bonus h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(213, 96%, 18%);
+}
+.bonus h4 {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+}
+
+#plus {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#fin {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  text-align: center;
+  gap: 1rem;
+}
+#fin img {
+  width: 10rem;
+  height: 10rem;
 }
 
 /*# sourceMappingURL=index.css.map */

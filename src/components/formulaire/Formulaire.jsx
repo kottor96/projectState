@@ -58,23 +58,42 @@ export default function Formulaire(props) {
                 )
                 :props.page===2
                 ?<form>
+                    <div className="head">
+                        <h2>Ajoute ce qu'il te manque</h2>
+                        <h3>Si il te manque de quelque chose, prend en plus</h3>
+                    </div>
+                    <div id="plus">
+                        {
+                            props.listeBonus.map(el=>
+                                <Add_On el={el} key={el.option} an={props.an}/>
+                            )
+                        }
+                    </div>
                     <div className="btn_SP">
-                        <div id="add_on">
-                            {
-                                props.listeBonus.map(el=>
-                                    <Add_On el={el} key={el.option}/>
-                                )
-                            }
-                        </div>
                         <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
                         <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>
                     </div>
                 </form>
-                :<form>
+                :props.page===3
+                ?<form>
+                    <div className="head">
+                        <h2>Confirmer</h2>
+                        <h3>recapitulatif de la commande</h3>
+                    </div>
                     <div className="btn_SP">
                         <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
+                        <Btn containt={'Confimer'} grid={'suivant'} action={props.nextPage}/>
                     </div>
                 </form>
+                :props.page===4
+                ?<form id="fin">
+                    <img src={props.fin} alt="fin" />
+                    <div className="head">
+                        <h2>Merci !</h2>
+                        <h3>Nous avons bien reçus votre commande, et nous somme heureux de vous annoncer que ce formulaire fais rien d'autre que clignoter en orange quand on appuye sur y</h3>
+                    </div>
+                </form>
+                :<p>Error</p>
 
 
                 

@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import Card from './components/card'
 import arcade from './assets/arcade.svg'
 import pro from './assets/pro.svg'
@@ -22,6 +22,17 @@ function App() {
   function prewPage(){
     setPage(page-1)
   }
+  function y(e){
+    console.log(e);
+    console.log(e.target);
+    
+    
+    e.key==='y' 
+    ? e.target.classList.toggle('rigolo')
+    : null
+    console.log(e);
+    
+  }
 
   return (
     <>
@@ -34,6 +45,8 @@ function App() {
         an={an}
         anMois={anMois}
         listeBonus={listeBonus}
+        fin={merci}
+        y={y}
       />
     </>
   )
