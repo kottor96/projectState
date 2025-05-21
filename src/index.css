@@ -1,18 +1,138 @@
-/* Error: Expected identifier.
- *    ,
- * 31 |                 background-color: $
- *    |                                    ^
- *    '
- *   src\sass\partials\_etape.sass 31:36  @use
- *   src\sass\main.sass 6:1               root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected identifier.\a    \2577 \a 31 \2502                  background-color: $\d\a    \2502                                     ^\a    \2575 \a   src\\sass\\partials\\_etape.sass 31:36  @use\a   src\\sass\\main.sass 6:1               root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  font-family: Ubuntu, sans-serif;
+  background-color: hsl(217, 100%, 97%) !important;
 }
+
+#cardFormulaire {
+  padding: 3rem 15vw;
+}
+
+#carte {
+  justify-content: space-between;
+  min-height: 80vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  display: flex;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+#carte > div {
+  padding: 1rem 2rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  gap: 2%;
+}
+.plan > div {
+  width: 32%;
+  border: hsl(229, 24%, 87%) 2px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 3px 5px;
+}
+.plan > div h3, .plan > div h4 {
+  margin: 0;
+}
+.plan > div h3 {
+  font-size: larger;
+  color: hsl(213, 96%, 18%);
+}
+.plan > div h4 {
+  font-size: medium;
+  color: hsl(231, 11%, 63%);
+}
+
+#formulaire {
+  flex: 3;
+}
+#formulaire > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#formulaire > form .divEntrer {
+  display: flex;
+  flex-direction: column;
+}
+
+#etape {
+  background-image: url("./assets/sidebar.svg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#etape .etape {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#etape .etape h3, #etape .etape h4 {
+  margin: 0;
+}
+#etape .etape h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+}
+#etape .etape h4 {
+  color: hsl(229, 24%, 87%);
+  font-size: 0.6rem;
+}
+#etape .etape > div:first-child {
+  flex: 1;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+#etape .etape > div:first-child button:hover {
+  background-color: hsl(206, 94%, 87%);
+}
+#etape .etape > div:first-child button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgba(70.89, 61.2, 255, 0);
+  border: hsl(229, 24%, 87%) solid 2px;
+}
+#etape .etape > div:last-child {
+  flex: 3;
+}
+
+.btn_SP {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "precedent suivant";
+  gap: 5rem;
+}
+.btn_SP button {
+  border-radius: 10px;
+  border: none;
+  width: fit-content;
+  padding: 10px 20px;
+}
+.btn_SP .suivant {
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+}
+.btn_SP .suivant:hover {
+  filter: brightness(2);
+}
+.btn_SP .precedent:hover {
+  filter: brightness(0.8);
+}
+.btn_SP .precedent {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/*# sourceMappingURL=index.css.map */
