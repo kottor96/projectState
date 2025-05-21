@@ -1,14 +1,56 @@
+body {
+  background-color: hsl(217, 100%, 97%) !important;
+}
+
 #cardFormulaire {
   padding: 5rem 20vw;
 }
 
 #carte {
   justify-content: space-between;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
-  padding: 1rem 2rem;
   display: flex;
   border: 1px solid black;
+}
+#carte > div {
+  padding: 1rem 2rem;
+}
+
+#etape {
+  background-color: hsl(243, 100%, 62%);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  flex: 1;
+}
+
+#formulaire {
+  flex: 3;
+}
+#formulaire > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#formulaire > form .divEntrer {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_SP {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "precedent suivant";
+  gap: 5rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
