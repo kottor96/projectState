@@ -1,6 +1,22 @@
+@use './_variable' as *
+
+    
 .plan
     display: flex
     flex-direction: row
-    justify-content: space-evenly
     margin: 1rem
-    gap: 1rem
+    gap: 2%
+    >div
+        width: 32%
+        border: $Light_gray 2px solid
+        border-radius: 10px
+        box-sizing: border-box
+        padding: 3px 5px
+        h3,h4
+            margin: 0
+        h3
+            font-size: larger
+            color: $Marine_blue
+        h4
+            font-size: medium
+            color: $Cool_gray

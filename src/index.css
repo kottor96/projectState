@@ -1,56 +1,18 @@
-body {
-  background-color: hsl(217, 100%, 97%) !important;
-}
+/* Error: Expected identifier.
+ *    ,
+ * 31 |                 background-color: $
+ *    |                                    ^
+ *    '
+ *   src\sass\partials\_etape.sass 31:36  @use
+ *   src\sass\main.sass 6:1               root stylesheet */
 
-#cardFormulaire {
-  padding: 5rem 20vw;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a    \2577 \a 31 \2502                  background-color: $\d\a    \2502                                     ^\a    \2575 \a   src\\sass\\partials\\_etape.sass 31:36  @use\a   src\\sass\\main.sass 6:1               root stylesheet";
 }
-
-#carte {
-  justify-content: space-between;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 1rem;
-  display: flex;
-  border: 1px solid black;
-}
-#carte > div {
-  padding: 1rem 2rem;
-}
-
-#etape {
-  background-color: hsl(243, 100%, 62%);
-  border-radius: 1rem;
-  margin: 0.5rem;
-  flex: 1;
-}
-
-#formulaire {
-  flex: 3;
-}
-#formulaire > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-#formulaire > form .divEntrer {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn_SP {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "precedent suivant";
-  gap: 5rem;
-}
-
-.plan {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 1rem;
-  gap: 1rem;
-}
-
-/*# sourceMappingURL=index.css.map */

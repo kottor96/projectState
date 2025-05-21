@@ -2,13 +2,13 @@ export default function EtapeBtn({n,etape}) {
 
   return (
     <>
-        <div>
+        <div className="etape">
             <div>
-                <button>{n}</button>
+              <button>{n}</button>
             </div>
             <div>
-                <h4>étape {n}</h4>
-                <h3>{etape}</h3>
+              <h4>étape {n}</h4>
+              <h3>{etape}</h3>
             </div>
         </div>
     </>

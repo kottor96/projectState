@@ -1,0 +1,40 @@
+@use './_variable' as *
+
+    
+#etape
+    background-image: url('./assets/sidebar.svg')
+    background-size: cover
+    background-position: bottom
+    background-repeat: no-repeat
+    border-radius: 1rem
+    margin: 0.5rem
+    flex: 1
+    display: flex
+    flex-direction: column
+    .etape
+        display: flex
+        flex-direction: row
+        gap: 1rem
+        justify-content: space-between
+        align-items: flex-start
+        h3,h4
+            margin: 0
+        h3
+            color: $white
+        h4
+            color: $Light_gray
+        >div:first-child
+            flex: 1
+            border-radius: 50%
+            box-sizing: border-box
+            button:hover
+                background-color: $
+            button
+                height: 2rem
+                width: 2rem
+                border-radius: 50%
+                background-color: rgba($Purplish_blue, 0)
+                border: $Light_gray solid 2px
+
+        >div:last-child
+            flex: 3

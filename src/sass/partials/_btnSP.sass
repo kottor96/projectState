@@ -1,0 +1,23 @@
+@use './_variable' as *
+
+    
+.btn_SP
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: 'precedent suivant'
+    gap: 5rem
+    button
+        border-radius: 10px
+        border: none
+        width: fit-content
+        padding: 10px 20px
+    .suivant
+        background-color: $Marine_blue
+        color: $white
+    .suivant:hover
+        filter: brightness(2)
+
+    .precedent:hover
+        filter: brightness(0.8)
+    .precedent
+        background-color: $white

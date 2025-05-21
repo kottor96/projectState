@@ -6,7 +6,7 @@ import sidebar from './assets/sidebar.svg'
 import merci from './assets/thankyou.svg'
 import avancer from './assets/advenced.svg'
 
-const listePlan = [{logo:arcade,titre:'Arcade',prixM:9},{logo:avancer,titre:'Avancer',prixA:12},{logo:pro,titre:'Pro',prix:15}]
+const listePlan = [{logo:arcade,titre:'Arcade',prix:9},{logo:avancer,titre:'Avancer',prix:12},{logo:pro,titre:'Pro',prix:15}]
 function App() {
   const [page,setPage] = useState(0)
   const [id,setId] = useState({nom:'',email:'',numberPhone:''}) 
