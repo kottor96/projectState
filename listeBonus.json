@@ -1,0 +1,17 @@
+[
+    {
+        "option":"Service en ligne",
+        "description":"Accès au jeux multijoueur",
+        "prix":1
+    },
+    {
+        "option":"Gros Stockage",
+        "description":"1 TB de stockage en extra",
+        "prix":2
+    },
+    {
+        "option":"Customization de profile",
+        "description":"Modifier le thème du profile",
+        "prix":2
+    }
+]

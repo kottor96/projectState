@@ -1,5 +1,6 @@
 import Btn from "./Btn";
 import Entrer from "./Entrer";
+import Add_On from "./option/Add-on";
 import Plan from "./Plan";
 
 
@@ -35,18 +36,19 @@ export default function Formulaire(props) {
                         </div>
                         <div className="plan">
                             {props.listePlan.map((el,index)=>
-                                <Plan key={index} el={el}/>
+                                <Plan key={index} el={el} an={props.an}/>
                             )}
                         </div>
                         <div className="form-switch p-0 d-flex justify-content-between">
                             <h6>Mois</h6>
                             <input
+                                onChange={props.anMois}
                                 className="form-check-input"
                                 type="checkbox"
                                 role="switch"
                                 id="switchCheckDefault"
                             />
-                            <h6>Ans</h6>
+                            <h6>An</h6>
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
@@ -57,6 +59,13 @@ export default function Formulaire(props) {
                 :props.page===2
                 ?<form>
                     <div className="btn_SP">
+                        <div id="add_on">
+                            {
+                                props.listeBonus.map(el=>
+                                    <Add_On el={el} key={el.option}/>
+                                )
+                            }
+                        </div>
                         <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
                         <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>
                     </div>
