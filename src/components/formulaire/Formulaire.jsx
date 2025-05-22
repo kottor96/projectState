@@ -17,9 +17,9 @@ export default function Formulaire(props) {
                         
 
                         <div id="info">
-                            <Entrer label={'Votre nom est :'} type={'text'} placeholder={'Truc Mush'}/>
-                            <Entrer label={'votre adresse est :'} type={'email'} placeholder={'trucmush@gmail.com'}/>
-                            <Entrer label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'}/>
+                            <Entrer valeur={props.id.nom} label={'Votre nom est :'} type={'text'} placeholder={'Truc Mush'} modifier={props.modifier} id={'nom'}/>
+                            <Entrer valeur={props.id.email} label={'votre adresse est :'} type={'email'} placeholder={'trucmush@gmail.com'} modifier={props.modifier} id={'email'} />
+                            <Entrer valeur={props.id.phone} label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'} modifier={props.modifier} id={'phone'}/>
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>

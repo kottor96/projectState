@@ -12,6 +12,16 @@ function App() {
   const [id,setId] = useState({nom:'',email:'',numberPhone:''}) 
   const [an,setAn] = useState(false)
 
+  function modifier(e) {
+    e.target.id === 'nom' 
+    && setId({...id,nom:e.target.value})
+    e.target.id === 'email'
+    && setId({...id,email:e.target.value})
+    e.target.id === 'phone'
+    && setId({...id,numberPhone:e.target.value})
+    
+  }
+
   function anMois() {
     setAn(!an)
   }
@@ -23,14 +33,11 @@ function App() {
     setPage(page-1)
   }
   function y(e){
-    console.log(e);
-    console.log(e.target);
     
     
     e.key==='y' 
     ? e.target.classList.toggle('rigolo')
     : null
-    console.log(e);
     
   }
 
@@ -47,6 +54,7 @@ function App() {
         listeBonus={listeBonus}
         fin={merci}
         y={y}
+        modifier={modifier}
       />
     </>
   )
