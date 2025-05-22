@@ -1,8 +1,4 @@
 export default function Entrer({valeur,label,type,placeholder,modifier,id}) {
-  console.log(valeur);
-  console.log(id);
-  console.log(modifier);
-  
   
   
   return (

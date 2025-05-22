@@ -36,7 +36,7 @@ export default function Formulaire(props) {
                         </div>
                         <div className="plan">
                             {props.listePlan.map((el,index)=>
-                                <Plan key={index} el={el} an={props.an}/>
+                                <Plan key={index} i={index} el={el} an={props.an} choisirPlan={props.choisirPlan} planI={props.planI}/>
                             )}
                         </div>
                         <div className="form-switch p-0 d-flex justify-content-between">
@@ -64,8 +64,8 @@ export default function Formulaire(props) {
                     </div>
                     <div id="plus">
                         {
-                            props.listeBonus.map(el=>
-                                <Add_On el={el} key={el.option} an={props.an}/>
+                            props.listeBonus.map((el,index)=>
+                                <Add_On el={el} key={el.option} an={props.an} i={index}/>
                             )
                         }
                     </div>

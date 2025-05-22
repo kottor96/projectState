@@ -11,6 +11,7 @@ function App() {
   const [page,setPage] = useState(0)
   const [id,setId] = useState({nom:'',email:'',numberPhone:''}) 
   const [an,setAn] = useState(false)
+  const [plan,setPlan] = useState(undefined)
 
   function modifier(e) {
     e.target.id === 'nom' 
@@ -19,6 +20,11 @@ function App() {
     && setId({...id,email:e.target.value})
     e.target.id === 'phone'
     && setId({...id,numberPhone:e.target.value})
+    
+  }
+
+  function choisirPlan(i) {
+    setPlan(listePlan[i])
     
   }
 
@@ -55,6 +61,8 @@ function App() {
         fin={merci}
         y={y}
         modifier={modifier}
+        planI={plan}
+        choisirPlan={choisirPlan}
       />
     </>
   )
