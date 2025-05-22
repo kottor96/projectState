@@ -12127,9 +12127,16 @@ textarea.form-control-lg {
   padding: 1rem;
   align-content: center;
 }
+.recap .recapResultat .total {
+  color: hsl(231, 11%, 63%);
+}
 .recap .recapBonus {
   display: flex;
   flex-direction: column !important;
+}
+.recap .recapBonus .option {
+  color: hsl(231, 11%, 63%);
+  padding: 0.2rem;
 }
 .recap .recapBonus > div {
   justify-content: space-between;

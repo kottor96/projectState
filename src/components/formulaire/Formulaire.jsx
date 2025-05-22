@@ -5,6 +5,8 @@ import Plan from "./components_formulaire/Plan";
 import Recap from "./components_formulaire/finish";
 
 export default function Formulaire(props) {
+    console.log(props.id);
+    
     const test = props.id.nom==='' || props.id.email ==='' || props.id.number===''
     const optionTest = props.planI!==undefined
     return (
@@ -21,7 +23,7 @@ export default function Formulaire(props) {
                         <div id="info">
                             <Entrer valeur={props.id.nom} label={'Votre nom est :'} type={'text'} placeholder={'Truc Mush'} modifier={props.modifier} id={'nom'}/>
                             <Entrer valeur={props.id.email} label={'votre adresse est :'} type={'email'} placeholder={'trucmush@gmail.com'} modifier={props.modifier} id={'email'} />
-                            <Entrer valeur={props.id.phone} label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'} modifier={props.modifier} id={'phone'}/>
+                            <Entrer valeur={props.id.numberPhone} label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'} modifier={props.modifier} id={'phone'}/>
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'suivant'} grid={'suivant'} action={!test?props.nextPage:null} className={test? 'disabled':''}/>
