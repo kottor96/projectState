@@ -1,0 +1,45 @@
+@use './_variable' as *
+    
+.recap
+    h3
+        color: hsl(215, 51%, 34%)
+    h3,p
+        margin: 0
+    a
+        color: $Cool_gray !important
+        cursor: pointer
+
+    .prix
+        color: hsl(215, 51%, 34%)
+    .prixT
+        color: $Purplish_blue
+        font-weight: 700
+        font-size: 1.5em
+
+    display: flex
+    flex-direction: column
+    .recapListe
+        padding: 2rem
+        display: flex
+        flex-direction: column
+        background-color: $Light_gray 
+        >div
+            display: flex
+            justify-content: space-between
+    .recapResultat
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 1rem
+        align-content: center
+
+    .recapBonus
+        display: flex
+        flex-direction: column !important
+        >div
+            justify-content: space-between
+            display: flex
+            flex-direction: row
+    .recapOption
+        flex-direction: row
+        >div

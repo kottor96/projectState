@@ -30,7 +30,10 @@ function App() {
 
   function choisirPlan(i) {
     setPlan(listePlan[i])
-    
+  }
+
+  function allerPage(i) {
+    setPage(i)
   }
 
   function anMois() {
@@ -70,6 +73,7 @@ function App() {
         choisirPlan={choisirPlan}
         activeBonus={activeBonus}
         bonus={bonus}
+        allerPage={allerPage}
       />
     </>
   )

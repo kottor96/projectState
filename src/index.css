@@ -64,6 +64,10 @@ body {
   backdrop-filter: brightness(0.8);
 }
 
+.form-switch {
+  background-color: hsl(229, 24%, 87%);
+}
+
 #formulaire {
   flex: 3;
 }
@@ -139,6 +143,7 @@ body {
 .btn_SP .suivant {
   background-color: hsl(213, 96%, 18%);
   color: hsl(0, 0%, 100%);
+  justify-self: flex-end;
 }
 .btn_SP .suivant:hover {
   filter: brightness(2);
@@ -12081,6 +12086,58 @@ textarea.form-control-lg {
 #fin img {
   width: 10rem;
   height: 10rem;
+}
+
+.recap {
+  display: flex;
+  flex-direction: column;
+}
+.recap h3 {
+  color: hsl(215, 51%, 34%);
+}
+.recap h3, .recap p {
+  margin: 0;
+}
+.recap a {
+  color: hsl(231, 11%, 63%) !important;
+  cursor: pointer;
+}
+.recap .prix {
+  color: hsl(215, 51%, 34%);
+}
+.recap .prixT {
+  color: hsl(243, 100%, 62%);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.recap .recapListe {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(229, 24%, 87%);
+}
+.recap .recapListe > div {
+  display: flex;
+  justify-content: space-between;
+}
+.recap .recapResultat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  align-content: center;
+}
+.recap .recapBonus {
+  display: flex;
+  flex-direction: column !important;
+}
+.recap .recapBonus > div {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.recap .recapOption {
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=index.css.map */

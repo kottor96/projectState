@@ -41,7 +41,7 @@ export default function Formulaire(props) {
                                 <Plan key={index} i={index} el={el} an={props.an} choisirPlan={props.choisirPlan} planI={props.planI}/>
                             )}
                         </div>
-                        <div className="form-switch p-0 d-flex justify-content-between">
+                        <div className="form-switch p-2 pt-3 rounded-2 d-flex justify-content-around">
                             <h6>Mois</h6>
                             <input
                                 onChange={props.anMois}
