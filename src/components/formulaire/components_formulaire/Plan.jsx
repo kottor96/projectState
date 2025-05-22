@@ -1,5 +1,5 @@
 export default function Plan({el,an,planI,choisirPlan,i}) {
-  
+    
   
   
   
@@ -11,7 +11,7 @@ export default function Plan({el,an,planI,choisirPlan,i}) {
         </div>
         <div>
           <h3>{el.titre}</h3>
-          <h4>{an? `${el.prix*10}/ans` : `${el.prix}/mois`}</h4>
+          <h4>{an? `${el.prix*10}€/an` : `${el.prix}€/mois`}</h4>
         </div>
       </div>
     </>

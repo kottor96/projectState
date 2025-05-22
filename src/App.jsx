@@ -12,6 +12,11 @@ function App() {
   const [id,setId] = useState({nom:'',email:'',numberPhone:''}) 
   const [an,setAn] = useState(false)
   const [plan,setPlan] = useState(undefined)
+  const [bonus,setBonus] = useState({0:false,1:false,2:false})
+
+  function activeBonus(i) {
+    setBonus({...bonus,[i]:!bonus[i]})
+  }
 
   function modifier(e) {
     e.target.id === 'nom' 
@@ -63,6 +68,8 @@ function App() {
         modifier={modifier}
         planI={plan}
         choisirPlan={choisirPlan}
+        activeBonus={activeBonus}
+        bonus={bonus}
       />
     </>
   )

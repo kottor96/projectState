@@ -59,6 +59,11 @@ body {
   border-color: hsl(268, 46%, 74%);
 }
 
+.planActive {
+  border-color: hsl(268, 46%, 74%) !important;
+  backdrop-filter: brightness(0.8);
+}
+
 #formulaire {
   flex: 3;
 }
@@ -12031,6 +12036,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   padding: 4px 10px;
+  cursor: pointer !important;
   width: 100%;
   border: 2px hsl(229, 24%, 87%) solid;
   border-radius: 10px;
@@ -12054,6 +12060,9 @@ textarea.form-control-lg {
 .bonus h4 {
   color: hsl(231, 11%, 63%);
   font-size: 0.8rem;
+}
+.bonus input {
+  cursor: pointer !important;
 }
 
 #plus {

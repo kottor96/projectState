@@ -1,9 +1,9 @@
-export default function Add_On({el,an}) {
-
+export default function Add_On({el,an,activeBonus,i,bonus}) {
+  
   return (
     <>
-      <div className="bonus">
-        <input type="checkbox"/>
+      <div className="bonus" onClick={()=>activeBonus(i)}>
+        <input type="checkbox" checked={bonus[i]} readOnly/>
         <div>
           <h3>{el.option}</h3>
           <h4>{el.description}</h4>

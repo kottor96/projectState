@@ -1,10 +1,12 @@
-import Btn from "./Btn";
-import Entrer from "./Entrer";
-import Add_On from "./option/Add-on";
-import Plan from "./Plan";
-
+import Btn from "./components_formulaire/Btn";
+import Entrer from "./components_formulaire/Entrer";
+import Add_On from "./components_formulaire/Add-on";
+import Plan from "./components_formulaire/Plan";
+import Recap from "./components_formulaire/finish";
 
 export default function Formulaire(props) {
+    const test = props.id.nom==='' || props.id.email ==='' || props.id.number===''
+    const optionTest = props.planI!==undefined
     return (
         <>
             {props.page===0 
@@ -22,7 +24,7 @@ export default function Formulaire(props) {
                             <Entrer valeur={props.id.phone} label={'votre numero est :'} type={'number'} placeholder={'0000 00 00 00'} modifier={props.modifier} id={'phone'}/>
                         </div>
                         <div className="btn_SP">
-                            <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>
+                            <Btn containt={'suivant'} grid={'suivant'} action={!test?props.nextPage:null} className={test? 'disabled':''}/>
                         </div>
                     </form>
                 )
@@ -52,7 +54,7 @@ export default function Formulaire(props) {
                         </div>
                         <div className="btn_SP">
                             <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
-                            <Btn containt={'suivant'} grid={'suivant'} action={props.nextPage}/>
+                            <Btn containt={'suivant'} grid={'suivant'} action={optionTest?props.nextPage:null} className={optionTest?'':'disabled'}/>
                         </div>
                     </form>
                 )
@@ -65,7 +67,7 @@ export default function Formulaire(props) {
                     <div id="plus">
                         {
                             props.listeBonus.map((el,index)=>
-                                <Add_On el={el} key={el.option} an={props.an} i={index}/>
+                                <Add_On el={el} key={el.option} an={props.an} i={index} activeBonus={props.activeBonus} bonus={props.bonus} />
                             )
                         }
                     </div>
@@ -79,6 +81,9 @@ export default function Formulaire(props) {
                     <div className="head">
                         <h2>Confirmer</h2>
                         <h3>recapitulatif de la commande</h3>
+                    </div>
+                    <div className='recap'>
+                        <Recap {...props}/>
                     </div>
                     <div className="btn_SP">
                         <Btn containt={'précedent'} grid={'precedent'} action={props.prewPage}/>
