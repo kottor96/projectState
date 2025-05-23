@@ -12146,5 +12146,25 @@ textarea.form-control-lg {
 .recap .recapOption {
   flex-direction: row;
 }
+@media screen and (max-width: 768px) {
+  #cardFormulaire {
+    padding: 0;
+    height: 100vh;
+    padding: 5px;
+  }
+  #carte {
+    flex-direction: column !important;
+    height: 100%;
+  }
+  #etape {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #etape .etape {
+    flex-direction: column;
+    flex: 1;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
